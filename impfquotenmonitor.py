@@ -69,6 +69,7 @@ def run_query(sum):
     return city, sitelink, querylink
 
 if __name__ == "__main__":
+    thinsp = '<span style="white-space:nowrap;font-size:50%">&thinsp;</span>'
     first_jab, second_jab = get_sum()
     city, sitelink, querylink = run_query(first_jab)
     datenstand = get_status()
@@ -77,7 +78,7 @@ if __name__ == "__main__":
         index_file.write(renderer.render_path(
             'index.mustache',
             {
-                "first_jab": f'{first_jab:,}'.replace(',','&thinsp;'),
+                "first_jab": f'{first_jab:,}'.replace(',',thinsp),
                 "second_jab": f'{second_jab:,}'.replace(',','&thinsp;'),
                 "city": city,
                 "datenstand": datenstand,
