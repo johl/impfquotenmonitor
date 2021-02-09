@@ -26,8 +26,8 @@ def get_sum():
     for i in range(4,20):
         if type(sheet.cell(row = i, column = 4).value) == int:
             first_jab += sheet.cell(row = i, column = 4).value
-        if type(sheet.cell(row = i, column = 9).value) == int:
-            second_jab += sheet.cell(row = i, column = 9).value
+        if type(sheet.cell(row = i, column = 11).value) == int:
+            second_jab += sheet.cell(row = i, column = 11).value
     return first_jab, second_jab
 
 def get_status():
